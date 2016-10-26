@@ -1,0 +1,29 @@
+{% extends "::layout.html.twig" %}
+
+{% block title %}{{ visserie.id}} - Voir - Visserie
+{% endblock %}
+
+{% block body %} {{ parent() }}
+
+	<table border="3" width="100%">
+	<tr>
+		<th>Num Vis</th><th>Type Vis</th><th>Lib Vis</th><th>Poids Vis</th><th>N_EmpPick</th>
+	</tr>
+		<tr>
+			<td>{{ visserie.numVis }}</td>
+			<td>{{ visserie.typeVis }}</td>
+			<td>{{ visserie.libVis }}</td>
+			<td>{{ visserie.poidsVis }}</td>
+			<td>{{ visserie.nEmpPick }}</td>
+	
+		</tr>
+
+<ul>
+<li><h4><a href="{{ path("qlio_gestion_deletevisserie", { id: visserie.id }) }}" title="Supprimer {{ visserie.id }}">Supprimer</li></h4></a>
+
+<li><h4><a href="{{ path("qlio_gestion_editvisserie", { id: visserie.id }) }}" title="Modifier {{ visserie.id }}">Modifier</li></h4></a>
+
+</ul>
+
+		
+{% endblock %}

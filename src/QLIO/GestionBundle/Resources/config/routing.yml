@@ -1,0 +1,193 @@
+qlio_gestion_home:
+    path:     /
+    defaults: { _controller: QLIOGestionBundle:Vis:index }
+    
+qlio_gestion_view:
+    path:     /voir
+    defaults: { _controller: QLIOGestionBundle:Vis:view }
+
+qlio_gestion_add:
+    path:     /ajouter
+    defaults: { _controller: QLIOGestionBundle:Vis:add }
+    
+qlio_gestion_addtypevis:
+    path:     /ajouter/typevis
+    defaults: { _controller: QLIOGestionBundle:Vis:addtypevis }
+    
+qlio_gestion_addairpicking:
+    path:     /ajouter/air-picking
+    defaults: { _controller: QLIOGestionBundle:Vis:addairpicking }
+    
+qlio_gestion_addbox:
+    path:     /ajouter/box
+    defaults: { _controller: QLIOGestionBundle:Vis:addbox }
+    
+qlio_gestion_addcontenirsachet:
+    path:     /ajouter/contenir-sachet
+    defaults: { _controller: QLIOGestionBundle:Vis:addcontenirsachet }
+    
+qlio_gestion_addcontenirvisserie:
+    path:     /ajouter/contenir-visserie
+    defaults: { _controller: QLIOGestionBundle:Vis:addcontenirvisserie }
+    
+qlio_gestion_addsachet:
+    path:     /ajouter/sachet
+    defaults: { _controller: QLIOGestionBundle:Vis:addsachet }
+    
+qlio_gestion_addvisserie:
+    path:     /ajouter/visserie
+    defaults: { _controller: QLIOGestionBundle:Vis:addvisserie }
+
+qlio_gestion_showtypevis:
+    path:     /{id}/typevis
+    defaults: { _controller: QLIOGestionBundle:Vis:showtypevis }
+    requirements:
+        id: \d+
+
+qlio_gestion_edittypevis:
+    path:     /{id}/editertypevis
+    defaults: { _controller: QLIOGestionBundle:Vis:edittypevis }
+    requirements:
+        id: \d+
+        
+qlio_gestion_deletetypevis:
+    path:   /{id}/supprimertypevis
+    defaults: { _controller: QLIOGestionBundle:Vis:deletetypevis }
+    requirements:
+        id: \d+
+        
+qlio_gestion_showairpicking:
+    path:     /{id}/voirairpicking
+    defaults: { _controller: QLIOGestionBundle:Vis:showairpicking }
+    requirements:
+        id: \d+
+
+qlio_gestion_editairpicking:
+    path:     /{id}/editerairpicking
+    defaults: { _controller: QLIOGestionBundle:Vis:editairpicking }
+    requirements:
+        id: \d+
+        
+qlio_gestion_deleteairpicking:
+    path:   /{id}/supprimerairpicking
+    defaults: { _controller: QLIOGestionBundle:Vis:deleteairpicking }
+    requirements:
+        id: \d+
+        
+qlio_gestion_showbox:
+    path:     /{id}/voirbox
+    defaults: { _controller: QLIOGestionBundle:Vis:showbox }
+    requirements:
+        id: \d+
+
+qlio_gestion_editbox:
+    path:     /{id}/editerbox
+    defaults: { _controller: QLIOGestionBundle:Vis:editbox }
+    requirements:
+        id: \d+
+        
+qlio_gestion_deletebox:
+    path:   /{id}/supprimerbox
+    defaults: { _controller: QLIOGestionBundle:Vis:deletebox }
+    requirements:
+        id: \d+
+        
+qlio_gestion_showcontenirsachet:
+    path:     /{id}/voircontenirsachet
+    defaults: { _controller: QLIOGestionBundle:Vis:showcontenirsachet }
+    requirements:
+        id: \d+
+
+qlio_gestion_editcontenirsachet:
+    path:     /{id}/editercontenirsachet
+    defaults: { _controller: QLIOGestionBundle:Vis:editcontenirsachet }
+    requirements:
+        id: \d+
+        
+qlio_gestion_deletecontenirsachet:
+    path:   /{id}/supprimercontenirsachet
+    defaults: { _controller: QLIOGestionBundle:Vis:deletecontenirsachet }
+    requirements:
+        id: \d+
+
+qlio_gestion_showcontenirvisserie:
+    path:     /{id}/voircontenirvisserie
+    defaults: { _controller: QLIOGestionBundle:Vis:showcontenirvisserie }
+    requirements:
+        id: \d+
+
+qlio_gestion_editcontenirvisserie:
+    path:     /{id}/editercontenirvisserie
+    defaults: { _controller: QLIOGestionBundle:Vis:editcontenirvisserie }
+    requirements:
+        id: \d+
+        
+qlio_gestion_deletecontenirvisserie:
+    path:   /{id}/supprimercontenirvisserie
+    defaults: { _controller: QLIOGestionBundle:Vis:deletecontenirvisserie }
+    requirements:
+        id: \d+
+        
+qlio_gestion_showsachet:
+    path:     /{id}/voirsachet
+    defaults: { _controller: QLIOGestionBundle:Vis:showsachet }
+    requirements:
+        id: \d+
+
+qlio_gestion_editsachet:
+    path:     /{id}/editersachet
+    defaults: { _controller: QLIOGestionBundle:Vis:editsachet }
+    requirements:
+        id: \d+
+        
+qlio_gestion_deletesachet:
+    path:   /{id}/supprimersachet
+    defaults: { _controller: QLIOGestionBundle:Vis:deletesachet }
+    requirements:
+        id: \d+
+
+qlio_gestion_showvisserie:
+    path:     /{id}/voirvisserie
+    defaults: { _controller: QLIOGestionBundle:Vis:showvisserie }
+    requirements:
+        id: \d+
+
+qlio_gestion_editvisserie:
+    path:     /{id}/editervisserie
+    defaults: { _controller: QLIOGestionBundle:Vis:editvisserie }
+    requirements:
+        id: \d+
+        
+qlio_gestion_deletevisserie:
+    path:   /{id}/supprimervisserie
+    defaults: { _controller: QLIOGestionBundle:Vis:deletevisserie }
+    requirements:
+        id: \d+
+    
+qlio_gestion_viewtypevis:
+    path:     /voir/typevis
+    defaults: { _controller: QLIOGestionBundle:Vis:viewtypevis }
+    
+qlio_gestion_viewairpicking:
+    path:     /voir/air-picking
+    defaults: { _controller: QLIOGestionBundle:Vis:viewairpicking }
+    
+qlio_gestion_viewbox:
+    path:     /voir/box
+    defaults: { _controller: QLIOGestionBundle:Vis:viewbox }
+    
+qlio_gestion_viewcontenirsachet:
+    path:     /voir/contenir-sachet
+    defaults: { _controller: QLIOGestionBundle:Vis:viewcontenirsachet }
+    
+qlio_gestion_viewcontenirvisserie:
+    path:     /voir/contenir-visserie
+    defaults: { _controller: QLIOGestionBundle:Vis:viewcontenirvisserie }
+    
+qlio_gestion_viewsachet:
+    path:     /voir/sachet
+    defaults: { _controller: QLIOGestionBundle:Vis:viewsachet }
+    
+qlio_gestion_viewvisserie:
+    path:     /voir/visserie
+    defaults: { _controller: QLIOGestionBundle:Vis:viewvisserie }

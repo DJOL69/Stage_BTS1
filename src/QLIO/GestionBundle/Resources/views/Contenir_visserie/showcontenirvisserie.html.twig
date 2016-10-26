@@ -1,0 +1,26 @@
+{% extends "::layout.html.twig" %}
+
+{% block title %}{{ contenir_visserie.id}} - Voir - Contenir-Visserie
+{% endblock %}
+
+{% block body %} {{ parent() }}
+
+	<table border="3" width="100%">
+	<tr>
+		<th>Qte Vis</th><th>Num Vis</th><th>Ref Sachet</th>
+	</tr>
+		<tr>
+			<td>{{ contenir_visserie.QteVis }}</td>
+			<td>{{ contenir_visserie.numVis }}</td>
+			<td>{{ contenir_visserie.refSachet }}</td>
+		</tr>
+		
+<ul>
+<li><h4><a href="{{ path("qlio_gestion_deletecontenirvisserie", { id: contenir_visserie.id }) }}" title="Supprimer {{ contenir_visserie.id }}">Supprimer</li></h4></a>
+
+<li><h4><a href="{{ path("qlio_gestion_editcontenirvisserie", { id: contenir_visserie.id }) }}" title="Modifier {{ contenir_visserie.id }}">Modifier</li></h4></a>
+
+</ul>
+
+
+{% endblock %}

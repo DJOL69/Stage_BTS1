@@ -1,0 +1,26 @@
+{% extends "::layout.html.twig" %}
+
+{% block title %}{{ contenir_sachet.id}} - Voir - Contenir-Sachet
+{% endblock %}
+
+{% block body %} {{ parent() }}
+
+	<table border="3" width="100%">
+	<tr>
+		<th>Ref Box</th><th>Ref Sachet</th><th>Qte Sachet</th>
+	</tr>
+		<tr>
+			<td>{{ contenir_sachet.refBox }}</td>
+			<td>{{ contenir_sachet.refSachet }}</td>
+			<td>{{ contenir_sachet.qteSachet }}</td>
+		</tr>
+		
+<ul>
+<li><h4><a href="{{ path("qlio_gestion_deletecontenirsachet", { id: contenir_sachet.id }) }}" title="Supprimer {{ contenir_sachet.id }}">Supprimer</li></h4></a>
+
+<li><h4><a href="{{ path("qlio_gestion_editcontenirsachet", { id: contenir_sachet.id }) }}" title="Modifier {{ contenir_sachet.id }}">Modifier</li></h4></a>
+
+</ul>
+
+
+{% endblock %}

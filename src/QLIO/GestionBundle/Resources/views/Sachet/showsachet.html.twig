@@ -1,0 +1,24 @@
+{% extends "::layout.html.twig" %}
+
+{% block title %}{{ sachet.id}} - Voir - Sachet
+{% endblock %}
+
+{% block body %} {{ parent() }}
+
+	<table border="3" width="100%">
+	<tr>
+		<th>Ref Sachet</th><th>TempsReaSach</th>
+	</tr>
+		<tr>
+			<td>{{ sachet.refSachet }}</td>
+			<td>{{ sachet.tempsReaSach |date('H:i:s') }}</td>
+		</tr>
+
+<ul>
+<li><h4><a href="{{ path("qlio_gestion_deletesachet", { id: sachet.id }) }}" title="Supprimer {{ sachet.id }}">Supprimer</li></h4></a>
+
+<li><h4><a href="{{ path("qlio_gestion_editsachet", { id: sachet.id }) }}" title="Modifier {{ sachet.id }}">Modifier</li></h4></a>
+
+</ul>
+
+{% endblock %}

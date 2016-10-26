@@ -1,0 +1,24 @@
+{% extends "::layout.html.twig" %}
+
+{% block title %}{{ airpicking.id}} - Voir - Air-Picking
+{% endblock %}
+
+{% block body %} {{ parent() }}
+
+	<table border="3" width="100%">
+	<tr>
+		<th>N_EmpPick</th>
+	</tr>
+		<tr>
+		<td>{{ airpicking.nEmpPick }} </td>
+		</tr>
+	
+<ul>
+
+<li><h4><a href="{{ path("qlio_gestion_deleteairpicking", { id: airpicking.id }) }}" title="Supprimer {{ airpicking.id }}">Supprimer</a></h4></li>
+
+<li><h4><a href="{{ path("qlio_gestion_editairpicking", { id: airpicking.id }) }}" title="Modifier {{ airpicking.id }}">Modifier</a></h4></li>
+
+</ul>
+	
+{% endblock %}

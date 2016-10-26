@@ -1,0 +1,20 @@
+{% extends "::layout.html.twig" %}
+
+{% block title %}{{ parent()}} - Voir - Sachet
+{% endblock %}
+
+{% block body %} {{ parent() }}
+
+	<table border="3" width="100%">
+	<tr>
+		<th>ID</th><th>Ref Sachet</th><th>TempsReaSach</th>
+	</tr>
+	{% for sachet in sachet %}
+		<tr>
+			<td><a href="{{ path("qlio_gestion_showsachet", { id: sachet.id }) }}" title=" {{ sachet.id }}">{{ sachet.id }} </a></td>
+			<td>{{ sachet.refSachet }}</td>
+			<td>{{ sachet.tempsReaSach |date('H:i:s') }}</td>
+		</tr>
+	{% endfor %}
+
+{% endblock %}

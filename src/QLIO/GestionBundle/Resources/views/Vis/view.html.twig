@@ -1,0 +1,18 @@
+{% extends "::layout.html.twig" %}
+
+{% block title %}{{ parent()}} - Voir
+{% endblock %}
+
+{% block body %}{{ parent() }}
+
+
+<h3><li><a href="{{ path('qlio_gestion_viewairpicking') }}" title="Air-Picking">Air-Picking</a></li></h3>
+<h3><li><a href="{{ path('qlio_gestion_viewbox') }}" title="Box">Box</a></li></h3>
+<h3><li><a href="{{ path('qlio_gestion_viewsachet') }}" title="Sachet">Sachet</a></li></h3>
+<h3><li><a href="{{ path('qlio_gestion_viewtypevis') }}" title="Type de Vis">Type de Vis</a></li></h3>
+<h3><li><a href="{{ path('qlio_gestion_viewcontenirsachet') }}" title="Contenir-Sachet">Contenir-Sachet</a></li></h3>
+<h3><li><a href="{{ path('qlio_gestion_viewcontenirvisserie') }}" title="Contenir-Visserie">Contenir-Visserie</a></li></h3>
+<h3><li><a href="{{ path('qlio_gestion_viewvisserie') }}" title="Visserie">Visserie</a></li></h3>
+
+
+{% endblock %}

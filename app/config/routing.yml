@@ -1,0 +1,5 @@
+qlio_gestion:
+    resource: "@QLIOGestionBundle/Resources/config/routing.yml"
+    prefix:   /gestion
+
+

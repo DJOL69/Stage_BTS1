@@ -1,0 +1,25 @@
+{% extends "::layout.html.twig" %}
+
+{% block title %}{{ box.id}} - Voir - Box
+{% endblock %}
+
+{% block body %} {{ parent() }}
+
+<table border="4" width="100%">
+	<tr>
+		<th>Ref Box</th><th>TempsRea Box</th>
+	</tr>
+<tr>
+	<td>{{ box.refBox }}</td>
+	<td>{{ box.tempsReaBox }}</td>
+	
+</tr>
+
+<ul>
+<li><h4><a href="{{ path("qlio_gestion_deletebox", { id: box.id }) }}" title="Supprimer {{ box.id }}">Supprimer</li></h4></a>
+
+<li><h4><a href="{{ path("qlio_gestion_editbox", { id: box.id }) }}" title="Modifier {{ box.id }}">Modifier</li></h4></a>
+
+</ul>
+
+{% endblock %}

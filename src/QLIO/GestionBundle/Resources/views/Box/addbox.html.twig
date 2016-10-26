@@ -1,0 +1,22 @@
+{% extends "::layout.html.twig" %}
+
+{% block title %} Ajouter - Box
+{% endblock %}
+
+{% block body %} {{ parent() }}
+
+	{{ form_start(form) }}
+	<table>
+		<tr>
+			<td>{{ form_label(form.refBox) }}</td>
+			<td>{{ form_widget(form.refBox) }}</td>
+			<td>{{ form_errors(form.refBox) }}</td>
+		</tr>
+		<tr>
+			<td>{{ form_label(form.tempsReaBox) }}</td>
+			<td>{{ form_widget(form.tempsReaBox) }}</td>
+			<td>{{ form_errors(form.tempsReaBox) }}</td>
+		</tr>
+	</table>
+	{{ form_end(form) }}
+{% endblock %}

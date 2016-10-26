@@ -1,0 +1,21 @@
+{% extends "::layout.html.twig" %}
+
+{% block title %}{{ parent()}} - Voir - Contenir-Visserie
+{% endblock %}
+
+{% block body %} {{ parent() }}
+
+	<table border="3" width="100%">
+	<tr>
+		<th>ID</th><th>Qte Vis</th><th>Num Vis</th><th>Ref Sachet</th>
+	</tr>
+	{% for contenir_visserie in contenir_visserie %}
+		<tr>
+			<td><a href="{{ path("qlio_gestion_showcontenirvisserie", { id: contenir_visserie.id }) }}" title=" {{ contenir_visserie.id }}">{{ contenir_visserie.id }} </a></td>
+			<td>{{ contenir_visserie.QteVis }}</td>
+			<td>{{ contenir_visserie.numVis }}</td>
+			<td>{{ contenir_visserie.refSachet }}</td>
+		</tr>
+	{% endfor %}
+
+{% endblock %}

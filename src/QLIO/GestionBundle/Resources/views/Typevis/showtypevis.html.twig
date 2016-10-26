@@ -1,0 +1,24 @@
+{% extends "::layout.html.twig" %}
+
+{% block title %}{{ typevis.id}} - Voir - Type de Vis
+{% endblock %}
+
+{% block body %} {{ parent() }}
+
+	<table border="3" width="100%">
+	<tr>
+		<th>TypeVis</th>
+	</tr>
+		<tr>
+			<td>{{ typevis.TypeVis }}</td>
+		</tr>
+		
+<ul>
+	
+<li><h4><a href="{{ path("qlio_gestion_deletetypevis", { id: typevis.id }) }}" title="Supprimer {{ typevis.id }}">Supprimer</a></h4></li>
+
+<li><h4><a href="{{ path("qlio_gestion_edittypevis", { id: typevis.id }) }}" title="Modifier {{ typevis.id }}">Modifier</a></h4></li>
+
+</ul>
+	
+{% endblock %}

@@ -1,0 +1,24 @@
+{% extends "::layout.html.twig" %}
+
+{% block title %}{{ parent()}} - Voir - Visserie
+{% endblock %}
+
+{% block body %} {{ parent() }}
+
+	<table border="3" width="100%">
+	<tr>
+		<th>ID</th><th>Num Vis</th><th>Type Vis</th><th>Lib Vis</th><th>Poids Vis</th><th>N_EmpPick</th>
+	</tr>
+	{% for visserie in visserie %}
+		<tr>
+			<td><a href="{{ path("qlio_gestion_showvisserie", { id: visserie.id }) }}" title=" {{ visserie.id }}">{{ visserie.id }} </a></td>
+			<td>{{ visserie.numVis }}</td>
+			<td>{{ visserie.typeVis }}</td>
+			<td>{{ visserie.libVis }}</td>
+			<td>{{ visserie.poidsVis }}</td>
+			<td>{{ visserie.nEmpPick }}</td>
+	
+		</tr>
+	{% endfor %}
+
+{% endblock %}

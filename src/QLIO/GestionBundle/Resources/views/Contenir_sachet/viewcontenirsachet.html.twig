@@ -1,0 +1,21 @@
+{% extends "::layout.html.twig" %}
+
+{% block title %}{{ parent()}} - Voir - Contenir-Sachet
+{% endblock %}
+
+{% block body %} {{ parent() }}
+
+	<table border="3" width="100%">
+	<tr>
+		<th>ID</th><th>Ref Box</th><th>Ref Sachet</th><th>Qte Sachet</th>
+	</tr>
+	{% for contenir_sachet in contenir_sachet %}
+		<tr>
+			<td><a href="{{ path("qlio_gestion_showcontenirsachet", { id: contenir_sachet.id }) }}" title=" {{ contenir_sachet.id }}">{{ contenir_sachet.id }} </a></td>
+			<td>{{ contenir_sachet.refBox }}</td>
+			<td>{{ contenir_sachet.refSachet }}</td>
+			<td>{{ contenir_sachet.qteSachet }}</td>
+		</tr>
+	{% endfor %}
+
+{% endblock %}

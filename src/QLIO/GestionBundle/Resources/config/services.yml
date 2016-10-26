@@ -1,0 +1,4 @@
+services:
+#    qlio_gestion.example:
+#        class: QLIO\GestionBundle\Example
+#        arguments: ["@service_id", "plain_value", %parameter%]

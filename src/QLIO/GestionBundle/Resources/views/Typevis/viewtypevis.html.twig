@@ -1,0 +1,20 @@
+{% extends "::layout.html.twig" %}
+
+{% block title %}{{ parent()}} - Voir - Type de Vis
+{% endblock %}
+
+{% block body %} {{ parent() }}
+
+	<table border="3" width="100%">
+	<tr>
+		<th>ID</th><th>TypeVis</th>
+	</tr>
+	{% for typevis in typevis %}
+		<tr>
+			<td><a href="{{ path("qlio_gestion_showtypevis", { id: typevis.id }) }}" title=" {{ typevis.id }}">{{ typevis.id }} </a></td>
+			<td>{{ typevis.TypeVis }}</td>
+		</tr>
+
+	{% endfor %}
+
+{% endblock %}

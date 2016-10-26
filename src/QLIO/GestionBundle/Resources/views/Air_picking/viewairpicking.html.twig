@@ -1,0 +1,19 @@
+{% extends "::layout.html.twig" %}
+
+{% block title %}{{ parent()}} - Voir - Air-Picking
+{% endblock %}
+
+{% block body %} {{ parent() }}
+
+	<table border="3" width="100%">
+	<tr>
+		<th>ID</th><th>N_EmpPick</th>
+	</tr>
+	{% for air_picking in air_picking %}
+		<tr>
+			<td><a href="{{ path("qlio_gestion_showairpicking", { id: air_picking.id }) }}" title=" {{ air_picking.id }}">{{ air_picking.id }} </a></td>
+			<td>{{ air_picking.nEmpPick }}</td>
+		</tr>
+	{% endfor %}
+
+{% endblock %}

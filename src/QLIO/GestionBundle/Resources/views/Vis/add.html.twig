@@ -1,0 +1,16 @@
+{% extends "::layout.html.twig" %}
+
+{% block title %}{{ parent()}} - Ajouter
+{% endblock %}
+
+{% block body %} {{ parent() }}
+
+<h3><li><a href="{{ path('qlio_gestion_addairpicking') }}" title="Air-Picking">Air-Picking</a></li></h3>
+<h3><li><a href="{{ path('qlio_gestion_addbox') }}" title="Box">Box</a></li></h3>
+<h3><li><a href="{{ path('qlio_gestion_addsachet') }}" title="Sachet">Sachet</a></li></h3>
+<h3><li><a href="{{ path('qlio_gestion_addtypevis') }}" title="Type de Vis">Type de Vis</a></li></h3>
+<h3><li><a href="{{ path('qlio_gestion_addcontenirsachet') }}" title="Contenir-Sachet">Contenir-Sachet</a></li></h3>
+<h3><li><a href="{{ path('qlio_gestion_addcontenirvisserie') }}" title="Contenir-Visserie" >Contenir-Visserie</a></li></h3>
+<h3><li><a href="{{ path('qlio_gestion_addvisserie') }}" title="Visserie">Visserie</a></li></h3>
+	
+{% endblock %}
